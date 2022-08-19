@@ -46,6 +46,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-projectionist'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ghifarit53/tokyonight-vim'
 Plugin 'ryanoasis/vim-devicons'
@@ -115,7 +116,7 @@ let NERDTreeShowHidden=1
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 autocmd FileType typescript :set makeprg=tsc
-
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
